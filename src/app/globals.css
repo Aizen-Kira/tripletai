@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 172 31% 96%;
+  --foreground: 162 29% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 162 29% 9%;
+  --muted: 165 16% 90%;
+  --muted-foreground: 166 10% 38%;
+  --accent: 39 87% 58%;
+  --accent-foreground: 162 29% 9%;
+  --primary: 158 83% 38%;
+  --primary-foreground: 0 0% 100%;
+  --border: 164 17% 81%;
+  --input: 164 17% 81%;
+  --ring: 158 83% 38%;
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(255, 191, 78, 0.2), transparent 26rem),
+    radial-gradient(circle at 92% 12%, rgba(20, 184, 166, 0.2), transparent 28rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.mapboxgl-control-container {
+  display: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
